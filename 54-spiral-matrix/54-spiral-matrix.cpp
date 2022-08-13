@@ -50,7 +50,7 @@ public:
             for(int i = down; lft <= rgt && i >= up; i-- )
             {
                 ans.push_back(matrix[i][cur_col]);
-                cout << "added 4 " << endl; 
+                // cout << "added 4 " << endl; 
 
             }
             
