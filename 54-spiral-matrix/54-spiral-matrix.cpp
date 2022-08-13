@@ -11,7 +11,7 @@ public:
         int lft = 0, rgt = col - 1;
         
         
-        while(up <= down && lft <= rgt )
+        while(up <= down && lft <= rgt && rgt >= 0 && down >= 0  )
         {
             
              // cout << " Start " << up << " " << down << " " << lft << " " << rgt << endl;
