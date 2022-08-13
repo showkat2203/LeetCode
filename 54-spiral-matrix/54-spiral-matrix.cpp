@@ -14,14 +14,14 @@ public:
         while(up <= down && lft <= rgt && rgt >= 0 && down >= 0  )
         {
             
-             cout << " Start " << up << " " << down << " " << lft << " " << rgt << endl;
+             // cout << " Start " << up << " " << down << " " << lft << " " << rgt << endl;
             
 //             Go right
             int cur_row = up;
             for(int i = lft; i <= rgt; i++ )
             {
                 ans.push_back(matrix[cur_row][i]);
-                cout << "added 1 " << endl; 
+                // cout << "added 1 " << endl; 
                 
             }
             up++;
@@ -31,7 +31,7 @@ public:
             for(int i = up; i <= down; i++ )
             {
                 ans.push_back(matrix[i][cur_col]);
-                cout << "added 2 " << endl; 
+                // cout << "added 2 " << endl; 
             }
             rgt--;
             
@@ -40,7 +40,7 @@ public:
             for(int i = rgt; up <= down && i >= lft; i-- )
             {
                 ans.push_back(matrix[cur_row][i]);
-                cout << "added 3 " << endl; 
+                // cout << "added 3 " << endl; 
                 
             }
             down--;
@@ -55,7 +55,7 @@ public:
             }
             
             lft++;
-            cout << "END ------------- " << up << " " << down << " " << lft << " " << rgt << endl;
+            // cout << "END ------------- " << up << " " << down << " " << lft << " " << rgt << endl;
         }
         
         if( ans.size() > (row*col))
