@@ -20,17 +20,6 @@ public:
         int first_row = 1;
         int first_col = 1;
         
-        for(int i = 0; i < mrow; i++ )
-        {
-            for(int j = 0; j < mcol; j++ )
-            {
-                cout << matrix[i][j] << " ";
-            }
-            cout << endl;
-        }
-        
-        cout << endl; 
-        
         for(int i = 0; i < mcol; i++)
         {
             if( matrix[0][i] == 0)
@@ -78,20 +67,7 @@ public:
                 cur_row++;
             }
         }
-        
-        cout << first_row << " " << first_col << endl;
-        
-        for(int i = 0; i < mrow; i++ )
-        {
-            for(int j = 0; j < mcol; j++ )
-            {
-                cout << matrix[i][j] << " ";
-            }
-            cout << endl;
-        }
-        
-        cout << endl;
-        
+
         for(int i = 1; i < mrow; i++ )
         {
             if( matrix[i][0] == 0 )
@@ -114,7 +90,6 @@ public:
         
         if( first_row == 0 )
         {
-            // cout << "Hello" << endl;
             for(int i = 0; i < mcol; i++)
             {
                 matrix[0][i] = 0;
@@ -123,23 +98,12 @@ public:
         
         if(first_col == 0 )
         {
-            
-            // cout << "Hello 2" << endl;
             for(int i = 0; i < mrow; i++)
             {
                 matrix[i][0] = 0;
             }
         }
         
-        for(int i = 0; i < mrow; i++ )
-        {
-            for(int j = 0; j < mcol; j++ )
-            {
-                cout << matrix[i][j] << " ";
-            }
-            cout << endl;
-        }
-        // cout << "Yes" << endl;
         return;
     }
 };
