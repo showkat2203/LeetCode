@@ -7,12 +7,14 @@ public:
         
         int ans = 0;
         
-        set<int> freqs;
+        set<int> freqs(begin(nums), end(nums));
         
-        for(int i = 0; i < nums.size(); i++ )
-        {
-            freqs.insert(nums[i]);
-        }
+        // set<int> freqs;
+        
+        // for(int i = 0; i < nums.size(); i++ )
+        // {
+        //     freqs.insert(nums[i]);
+        // }
         
         auto prev = freqs.begin() ;
         cout << *prev << endl;
@@ -41,9 +43,6 @@ public:
         cout << endl;
         
         maxi = max(maxi, cnt);
-        
-        
-          
         
         return maxi;
     }
