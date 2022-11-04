@@ -29,7 +29,7 @@ public:
                     scnd--;
                 }
             }
-            cout << s[fst] << " " << s[scnd] << endl;
+            // cout << s[fst] << " " << s[scnd] << endl;
         }
         return s;
     }
