@@ -9,7 +9,7 @@ public:
         if( memo[n] != -1 )
             return memo[n];
         
-        int min_cnt = 111;
+        int min_cnt = 101;
         
         for(int i = 1; i <= sqrt(n); i++ )
         {
