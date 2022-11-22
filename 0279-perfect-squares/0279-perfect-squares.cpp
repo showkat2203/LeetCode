@@ -12,10 +12,7 @@ public:
         int min_cnt = 101;
         
         for(int i = 1; i <= sqrt(n); i++ )
-        {
-            int sq = i * i;
-            min_cnt = min(min_cnt, 1 + dp(n - sq, memo));
-        }
+            min_cnt = min(min_cnt, 1 + dp(n - i * i, memo));
     
         
         return memo[n] = min_cnt;
