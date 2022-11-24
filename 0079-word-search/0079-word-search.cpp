@@ -13,11 +13,9 @@ public:
             flag = true;
             return;
         }
+        
         if( x < 0 || y < 0 || x >= r || y >= c || board[x][y] != goal[len] || flag )
             return;
-        
-//         if( board[x][y] == '#' )
-//             return;
         
         char prev_char = board[x][y];
         board[x][y] = '#';
@@ -32,7 +30,6 @@ public:
     bool exist(vector<vector<char>>& board, string word) {
         r = board.size();
         c = board[0].size();
-        
         
         for(int i = 0; i < r; i++ )
         {
