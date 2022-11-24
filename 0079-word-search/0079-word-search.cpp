@@ -13,11 +13,11 @@ public:
             flag = true;
             return;
         }
-        if( x < 0 || y < 0 || x >= r || y >= c || board[x][y] != goal[len] )
+        if( x < 0 || y < 0 || x >= r || y >= c || board[x][y] != goal[len] || flag )
             return;
         
-        if( board[x][y] == '#' || flag )
-            return;
+//         if( board[x][y] == '#' )
+//             return;
         
         char prev_char = board[x][y];
         board[x][y] = '#';
