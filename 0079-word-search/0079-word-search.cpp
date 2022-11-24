@@ -21,9 +21,8 @@ public:
         board[x][y] = '#';
         
         for(int i = 0; i < 4; i++ )
-        {
             dfs(board, x + dx[i], y + dy[i], len + 1, goal);
-        }
+        
         board[x][y] = prev_char;
     }
     
