@@ -1,28 +1,33 @@
-// copied.
-
+// copied
 class Solution {
 public:
-    int maxPoints(vector<vector<int>>& pt) {
-        int ans=1; 
-        int n=pt.size();
-       // slope of every point with selected point
-        for(int i=0;i<n-1;i++){
-            map<double,int> mp;
-            for(int j=i+1;j<n;j++){
-                //calculating the slope
-                double x = (double)(pt[j][1]-pt[i][1])/(double)(pt[j][0]-pt[i][0]);
-                if(pt[j][1]-pt[i][1]<0 &&(pt[j][0]-pt[i][0])==0 ) //infinite slop for Perpendicular line
-                mp[abs(x)]++; 
-                else
-               //storing the slop into map
-                    mp[x]++;
-            }
-            // same slope w.r.t.that selected point
-            int temp = 0;
-            for(auto it:mp)
-                temp = max(temp, it.second+1);    // +1 for the current point(point itself)
-            ans = max(temp, ans);
+    int maxPoints(vector<vector<int>>& points) {
+        if(points.size() < 3) {
+            return points.size();
         }
-        return ans;
+        int maxi = 0;
+        for(int i = 0; i < points.size(); i++) {
+            for(int j = i + 1; j < points.size(); j++) {
+                int x1 = points[i][0];
+                int y1 = points[i][1];
+                int x2 = points[j][0];
+                int y2 = points[j][1];
+                int cnt = 2;
+                for(int k = 0; k < points.size(); k++) {
+                    if(i == k || j == k) {
+                        continue;
+                    }
+                    int x = points[k][0];
+                    int y = points[k][1];
+                    int a = x * (y1 - y2) - x1 * (y1 - y2);
+                    int b = y * (x1 - x2) - y1 * (x1 - x2);
+                    if(a == b) {
+                        cnt++;
+                    }
+                }
+                maxi = max(maxi, cnt);
+            }
+        }
+        return maxi;
     }
 };
