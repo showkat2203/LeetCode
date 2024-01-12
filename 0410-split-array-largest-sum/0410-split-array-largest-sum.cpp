@@ -22,13 +22,10 @@ public:
             high += nums[i];
             low = max(low, nums[i]);
         }
-        
-        
         int maxi = INT_MIN;
         
         while( low <= high ){
             int mid = low + (high - low) / 2;
-            
             if( splitReq(nums, mid) <= k ){
                 maxi = mid;
                 high = mid - 1;
