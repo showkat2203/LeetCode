@@ -26,18 +26,13 @@ public:
             tail = tail->next;
         }
         
-        while( l1 != nullptr){
-            tail->next = l1;
-            l1 = l1->next;
-            tail = tail->next;
+        if( l1 ){
+           tail->next = l1;
         }
-        
-         while( l2 != nullptr){
+        else{
             tail->next = l2;
-            l2 = l2->next;
-            tail = tail->next;
         }
-        
+
         return dummy->next;
     }
 };
