@@ -4,7 +4,7 @@ public:
     int dx[4] = {0, 0, -1, 1};
     int dy[4] = {-1, 1, 0, 0};
     int vis[10][10];
-    void search(int pos, string& tmp, vector<vector<char>>& board, int r, int c, string word){
+    void search(int pos, string tmp, vector<vector<char>>& board, int r, int c, string word){
         vis[r][c] = 1;
        
         if( tmp == word ){
